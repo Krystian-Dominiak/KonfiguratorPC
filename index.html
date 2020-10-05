@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <section id="selectComp">
+        <table>
+            <tr>
+                <td>Płyta główna</td>
+                <td>
+                    <select name="mb" id="mb" onchange="SelectedItemValue('mb')">
+
+                    </select>
+                </td>
+                <tr>
+            <tr>
+                <td>Karta graficzna</td>
+                <td>
+                    <select name="gfx" id="gfx" onchange="SelectedItemValue('gfx')">
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Procesor</td>
+                <td>
+                    <select name="cpu" id="cpu" onchange="SelectedItemValue('cpu')">
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Pamięć Ram</td>
+                <td>
+                    <select name="ram" id="ram" onchange="SelectedItemValue('ram')">
+
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="summaryComp">
+        <div id="summaryCpu"></div>
+        <div id="summaryMb"></div>
+        <div id="summaryGfx"></div>
+        <div id="summaryRam"></div>
+    </section>
+
+    <div id="summaryMainboard"></div>
+    <div id="sumAll"></div>
+
+</main>
+
+<script src="js/script.js"></script>
+</body>
+</html>

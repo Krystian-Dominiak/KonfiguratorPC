@@ -1,0 +1,15 @@
+body{
+    background-image: url(../img/mainBackground.jpg);
+    background-color: goldenrod;
+    color:white;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 6000px;
+    height: 3376px;
+}
+
+#summaryComp{
+    border-top:4px solid white;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
