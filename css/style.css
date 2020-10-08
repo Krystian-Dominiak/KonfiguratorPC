@@ -1,5 +1,5 @@
 body{
-    background-image: url(../img/mainBackground.jpg);
+    background-image: url(../img/mainBACKGROUND.jpg);
     background-color: goldenrod;
     color:white;
     background-size: contain;
@@ -13,3 +13,31 @@ body{
     margin-top: 25px;
     margin-bottom: 15px;
 }
+#suma {
+    border-top: 4px solid white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+table#summaryComp {
+     width:20%;
+    height: auto;
+}
+table#summaryComp,
+table#summaryComp td
+{
+    border: 2px solid white;
+}
+table#summaryComp {
+    color: aqua;
+    size: 10px;
+}
+#summaryComp img {
+    width: 150px;
+    height: auto;
+}
+#sumAll {
+    position: absolute;
+    right: 20%;
+    top: 100px;
+}
+

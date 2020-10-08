@@ -41,14 +41,46 @@
                     </select>
                 </td>
             </tr>
+            <tr>
+                <td>Zasilacz</td>
+                <td>
+                    <select name="zas" id="zas" onchange="SelectedItemValue('zas')">
+
+                    </select>
+                </td>
+            </tr>
+            </td>
+            </tr>
+            <tr>
+                <td>Obudowa</td>
+                <td>
+                    <select name="obd" id="obd" onchange="SelectedItemValue('obd')">
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Monitor</td>
+                <td>
+                    <select name="mon" id="mon" onchange="SelectedItemValue('mon')">
+
+                    </select>
+                </td>
+            </tr>
+            </td>
+            </tr>
         </table>
     </section>
-    <section id="summaryComp">
-        <div id="summaryCpu"></div>
-        <div id="summaryMb"></div>
-        <div id="summaryGfx"></div>
-        <div id="summaryRam"></div>
-    </section>
+    <table id="summaryComp">
+        <tr id="suma"></tr>
+        <tr id="summaryCpu"></tr>
+        <tr id="summaryMb"></tr>
+        <tr id="summaryGfx"></tr>
+        <tr id="summaryRam"></tr>
+        <tr id="summaryZas"></tr>
+        <tr id="summaryObd"></tr>
+        <tr id="summaryMon"></tr>
+    </table>
 
     <div id="summaryMainboard"></div>
     <div id="sumAll"></div>
