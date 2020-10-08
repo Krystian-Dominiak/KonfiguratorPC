@@ -204,6 +204,38 @@ const mon = [
         img:"Monitor-AOC-24G2U.jpg"
     }
 ]
+const dsc = [
+    {
+        id: 1,
+        name: "Dysk Toshiba 4 TB 3.5 SATA III X300 (HDWE140UZSVA)",
+        price: 590,
+        img:"Dysk-Toshiba-4-TB-3.5-SATA-III-X300-(HDWE140UZSVA).jpg"
+    },
+    {
+        id: 2,
+        name:"Dysk Toshiba P300 1 TB 3.5 SATA III (HDWD110UZSVA) ",
+        price: 160,
+        img:"Dysk-Toshiba-P300-1-TB-3.5'-SATA-III-(HDWD110UZSVA).jpg"
+    },
+    {
+        id:3,
+        name: "Dysk Seagate Barracuda 2 TB 3.5 SATA III (ST2000DM008)",
+        price: 259,
+        img:"Dysk-Seagate-Barracuda-2-TB-3.5'-SATA-III-(ST2000DM008).jpg"
+    },
+    {
+        id:4,
+        name: "Dysk SSD Western Digital Blue 500 GB 2.5'' SATA III (WDS500G2B0A)",
+        price: 279,
+        img:"Dysk-SSD-Western-Digital-Blue-500-GB-2.5'-SATA-III-(WDS500G2B0A).jpg"
+    },
+    {
+        id:5,
+        name: "Dysk SSD Crucial MX500 500 GB 2.5'' SATA III (CT500MX500SSD1)",
+        price: 269,
+        img:"Dysk-SSD-Crucial-MX500-500-GB-2.5'-SATA-III-(CT500MX500SSD1).jpg"
+    }
+]
 var cart = [
 
     {
@@ -228,6 +260,14 @@ var cart = [
     },
     {
         name: 'obd',
+        price:0
+    },
+    {
+        name: 'mon',
+        price:0
+    },
+    {
+        name: 'dsc',
         price:0
     }
 ]
@@ -255,44 +295,50 @@ function SelectedItemValue(SelectId) {
     const summaryZas = document.getElementById("summaryZas");
     const summaryObd = document.getElementById("summaryObd");
     const summaryMon = document.getElementById("summaryMon");
+    const summaryDsc = document.getElementById("summaryDsc");
 
     if (SelectId == "cpu") {
-        summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt - 1].img+"'></td>"+"<td></td>"+cpu[strAtt - 1].name + " <td><td> " + cpu[strAtt - 1].price
+        summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt - 1].img+"'></td>"+"<td>"+cpu[strAtt - 1].name + " </td><td> " + cpu[strAtt - 1].price+"</td>"
         cart[2].price = cpu[strAtt - 1].price
         cart[2].name = cpu[strAtt - 1].name
     } else if (SelectId == "mb") {
-        summaryMb.innerHTML = "<td><img src='img/"+mb[strAtt - 1].img+"'></td>"+"<td></td>"+mb[strAtt - 1].name + " <td><td> " + mb[strAtt - 1].price
+        summaryMb.innerHTML = "<td><img src='img/"+mb[strAtt - 1].img+"'></td>"+"<td>"+mb[strAtt - 1].name + " </td><td> " + mb[strAtt - 1].price+"</td>"
         cart[0].price = mb[strAtt - 1].price
         cart[0].name = mb[strAtt - 1].name
         document.getElementById("summaryMainboard").innerHTML
     } else if (SelectId == "gfx") {
-        summaryGfx.innerHTML = "<td><img src='img/"+gfx[strAtt - 1].img+"'></td>"+"<td></td>"+gfx[strAtt - 1].name + " <td><td> " + gfx[strAtt - 1].price
+        summaryGfx.innerHTML = "<td><img src='img/"+gfx[strAtt - 1].img+"'></td>"+"<td>"+gfx[strAtt - 1].name + " </td><td> " + gfx[strAtt - 1].price+"</td>"
         cart[1].price = gfx[strAtt - 1].price
         cart[1].name = gfx[strAtt - 1].name
     }
     else if (SelectId == "ram") {
-        summaryRam.innerHTML = "<td><img src='img/"+ram[strAtt - 1].img+"'></td>"+"<td></td>"+ram[strAtt - 1].name + " <td><td> " + ram[strAtt - 1].price
+        summaryRam.innerHTML = "<td><img src='img/"+ram[strAtt - 1].img+"'></td>"+"<td>"+ram[strAtt - 1].name + " </td><td> " + ram[strAtt - 1].price+"</td>"
         cart[3].price = ram[strAtt - 1].price
         cart[3].name = ram[strAtt - 1].name
     }
     else if (SelectId == "zas") {
-        summaryZas.innerHTML = "<td><img src='img/"+zas[strAtt - 1].img+"'></td>"+"<td></td>"+zas[strAtt - 1].name + " <td><td> " + zas[strAtt - 1].price
+        summaryZas.innerHTML = "<td><img src='img/"+zas[strAtt - 1].img+"'></td>"+"<td>"+zas[strAtt - 1].name + " </td><td> " + zas[strAtt - 1].price+"</td>"
         cart[4].price = zas[strAtt - 1].price
         cart[4].name = zas[strAtt - 1].name
     }
     else if (SelectId == "obd") {
-        summaryObd.innerHTML = "<td><img src='img/"+obd[strAtt - 1].img+"'></td>"+"<td></td>"+obd[strAtt - 1].name + " <td><td> " + obd[strAtt - 1].price
+        summaryObd.innerHTML = "<td><img src='img/"+obd[strAtt - 1].img+"'></td>"+"<td>"+obd[strAtt - 1].name + " </td><td> " + obd[strAtt - 1].price+"</td>"
         cart[5].price = obd[strAtt - 1].price
         cart[5].name = obd[strAtt - 1].name
     }
     else if (SelectId == "mon") {
-        summaryMon.innerHTML = "<td><img src='img/"+mon[strAtt - 1].img+"'></td>"+"<td></td>"+mon[strAtt - 1].name + " <td><td> " + mon[strAtt - 1].price
+        summaryMon.innerHTML = "<td><img src='img/"+mon[strAtt - 1].img+"'></td>"+"<td>"+mon[strAtt - 1].name + " </td><td> " + mon[strAtt - 1].price+"</td>"
         cart[6].price = mon[strAtt - 1].price
         cart[6].name = mon[strAtt - 1].name
     }
+    else if (SelectId == "dsc") {
+        summaryDsc.innerHTML = "<td><img src='img/"+dsc[strAtt - 1].img+"'></td>"+"<td>"+dsc[strAtt - 1].name + " </td><td> " + dsc[strAtt - 1].price+"</td>"
+        cart[7].price = dsc[strAtt - 1].price
+        cart[7].name = dsc[strAtt - 1].name
+    }
     else {}
 
-    document.getElementById("sumAll").innerHTML="<b>Suma koszyka:"+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price+cart[4].price+cart[5].price) + "</b>"
+    document.getElementById("sumAll").innerHTML="<b>Suma koszyka: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price+cart[4].price+cart[5].price+cart[6].price+cart[7].price) +"</b>";
 }
 
 
@@ -317,6 +363,9 @@ for (let i = 0; i < obd.length; i++) {
 }
 for (let i = 0; i < mon.length; i++) {
     addOpt("mon", mon[i].id, mon[i].name)
+}
+for (let i = 0; i < dsc.length; i++) {
+    addOpt("dsc", dsc[i].id, dsc[i].name)
 }
 
 
