@@ -9,7 +9,7 @@ body{
 #summaryComp{
     border-top:4px solid white;
     margin-top: 25px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 #suma {
     border-top: 4px solid white;
@@ -17,7 +17,7 @@ body{
     margin-bottom: 10px;
 }
 table#summaryComp {
-     width:70%;
+     width:50%;
     height: auto;
 }
 table#summaryComp,
@@ -31,13 +31,30 @@ table#summaryComp {
     size: 10px;
 }
 #summaryComp img {
-    width: 240px;
+    width: 100px;
     height: auto;
 }
 #sumAll {
     position: absolute;
     right: 20%;
     top: 100px;
+    background-color: aqua;
+    color: black;
+    width: 8%;
+    height: 3%;
 }
+table#summaryComp td{
+    text-align: center;
+}
+table#summaryComp td:nth-child(1){
+    width: 13%;
+}
+table#summaryComp td:nth-child(2){
+    width: 60%;
+}
+table#summaryComp td:nth-child(3){
+    width: 20%;
+}
+
 
 
