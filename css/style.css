@@ -1,11 +1,9 @@
 body{
-    background-image: url(../img/mainBACKGROUND.jpg);
-    background-color: goldenrod;
+    background-image: url(../img/mainBackgrounD.jpg);
     color:white;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    width: 6000px;
-    height: 3376px;
+    font-family: 'Playfair Display', serif;
 }
 
 #summaryComp{
@@ -19,7 +17,7 @@ body{
     margin-bottom: 10px;
 }
 table#summaryComp {
-     width:20%;
+     width:70%;
     height: auto;
 }
 table#summaryComp,
@@ -33,7 +31,7 @@ table#summaryComp {
     size: 10px;
 }
 #summaryComp img {
-    width: 150px;
+    width: 240px;
     height: auto;
 }
 #sumAll {
@@ -41,4 +39,5 @@ table#summaryComp {
     right: 20%;
     top: 100px;
 }
+
 

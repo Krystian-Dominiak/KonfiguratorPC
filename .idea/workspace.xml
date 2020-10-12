@@ -4,6 +4,7 @@
     <list default="true" id="fab17340-a4fd-4a53-8c94-7d8f32cde095" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/Dysk-Toshiba-P300-1-TB-3.5'-SATA-III-(HDWD110UZSVA).jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
@@ -61,7 +62,9 @@
       <workItem from="1601896859442" duration="2635000" />
       <workItem from="1602051567650" duration="4395000" />
       <workItem from="1602147629368" duration="5412000" />
-      <workItem from="1602156908626" duration="4605000" />
+      <workItem from="1602156908626" duration="4750000" />
+      <workItem from="1602496400612" duration="471000" />
+      <workItem from="1602497257381" duration="3435000" />
     </task>
     <servers />
   </component>

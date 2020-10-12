@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -77,6 +78,24 @@
                     </select>
                 </td>
             </tr>
+            </tr>
+            <tr>
+                <td>Klawiatura</td>
+                <td>
+                    <select name="kla" id="kla" onchange="SelectedItemValue('kla')">
+
+                    </select>
+                </td>
+            </tr>
+            </tr>
+            <tr>
+                <td>Mysz komputerowa</td>
+                <td>
+                    <select name="mys" id="mys" onchange="SelectedItemValue('mys')">
+
+                    </select>
+                </td>
+            </tr>
         </table>
     </section>
     <table id="summaryComp">
@@ -89,6 +108,8 @@
         <tr id="summaryObd"></tr>
         <tr id="summaryMon"></tr>
         <tr id="summaryDsc"></tr>
+        <tr id="summaryKla"></tr>
+        <tr id="summaryMys"></tr>
     </table>
 
     <div id="summaryMainboard"></div>

@@ -213,27 +213,91 @@ const dsc = [
     },
     {
         id: 2,
-        name:"Dysk Toshiba P300 1 TB 3.5 SATA III (HDWD110UZSVA) ",
-        price: 160,
-        img:"Dysk-Toshiba-P300-1-TB-3.5'-SATA-III-(HDWD110UZSVA).jpg"
+        name:"Dysk Western Digital Blue 2 TB 2.5 SATA III (WD20SPZX)",
+        price: 403,
+        img:"Dysk-Western-Digital-Blue-2-TB-2-5-SATA-III-(WD20SPZX).jpg"
     },
     {
         id:3,
-        name: "Dysk Seagate Barracuda 2 TB 3.5 SATA III (ST2000DM008)",
-        price: 259,
-        img:"Dysk-Seagate-Barracuda-2-TB-3.5'-SATA-III-(ST2000DM008).jpg"
+        name: "Dysk Seagate Barracuda 10 TB 3.5 SATA III (ST10000DM0004)",
+        price: 1522,
+        img:"Dysk-Seagate-Barracuda-10-TB-3-5-SATA-III-(ST10000DM0004).jpg"
     },
     {
         id:4,
         name: "Dysk SSD Western Digital Blue 500 GB 2.5'' SATA III (WDS500G2B0A)",
         price: 279,
-        img:"Dysk-SSD-Western-Digital-Blue-500-GB-2.5'-SATA-III-(WDS500G2B0A).jpg"
+        img:"Dysk-SSD-Western-Digital-Blue-500-GB-2-5-SATA-III-(WDS500G2B0A).jpg"
     },
     {
         id:5,
-        name: "Dysk SSD Crucial MX500 500 GB 2.5'' SATA III (CT500MX500SSD1)",
-        price: 269,
-        img:"Dysk-SSD-Crucial-MX500-500-GB-2.5'-SATA-III-(CT500MX500SSD1).jpg"
+        name: "Dysk SSD Samsung 860 EVO 1 TB 2.5'' SATA III (MZ-76E1T0B/EU)",
+        price: 579,
+        img:"Dysk-SSD-Samsung-860-EVO-1-TB-2-5-SATA-III-(MZ-76E1T0B/EU).jpg"
+    }
+    ]
+const kla = [
+    {
+        id: 1,
+        name: "Klawiatura Logitech K360 Bezprzewodowa Czarna UK (920003094)",
+        price: 167,
+        img:"Klawiatura-Logitech-K360-Bezprzewodowa-Czarna-UK-(920003094).jpg"
+    },
+    {
+        id: 2,
+        name:"Klawiatura Logitech MX Keys do PC Bezprzewodowa Grafitowa US (920-009415) ",
+        price: 418,
+        img:"Klawiatura-Logitech-MX-Keys-do-PC-Bezprzewodowa-Grafitowa-US-(920-009415).jpg"
+    },
+    {
+        id:3,
+        name: "Klawiatura Apple Magic Keyboard MLA22Z/A Bezprzewodowa Biała UK (MLA22Z/A)",
+        price: 432,
+        img:"Klawiatura-Apple-Magic-Keyboard-MLA22Z/A-Bezprzewodowa-Biała-UK-(MLA22Z/A).jpg"
+    },
+    {
+        id:4,
+        name: "Klawiatura HyperX Alloy Elite II RGB (HKBE2X-1X-US/G)",
+        price: 659,
+        img:"Klawiatura-HyperX-Alloy-Elite-II-RGB-(HKBE2X-1X-US/G).jpg"
+    },
+    {
+        id:5,
+        name: "Klawiatura SteelSeries Apex 5 (64532)",
+        price: 535,
+        img:"Klawiatura-SteelSeries-Apex-5-(64532).jpg"
+    }
+]
+const mys = [
+    {
+        id: 1,
+        name: "Mysz SteelSeries Rival 310 (62433)",
+        price: 249,
+        img:"Mysz-SteelSeries-Rival-310-(62433).jpg"
+    },
+    {
+        id: 2,
+        name:"Mysz SteelSeries Rival 500 (62051)",
+        price: 359,
+        img:"Mysz-SteelSeries-Rival-500-(62051).jpg"
+    },
+    {
+        id:3,
+        name: "Mysz SteelSeries Sensei 310 Ambidextrous (62432)",
+        price: 293,
+        img:"Mysz-SteelSeries-Sensei-310-Ambidextrous-(62432).jpg"
+    },
+    {
+        id:4,
+        name: "Mysz SteelSeries Sensei Ten (62527) ",
+        price: 343,
+        img:"Mysz-SteelSeries-Sensei-Ten-(62527).jpg"
+    },
+    {
+        id:5,
+        name: "Mysz SteelSeries Rival 3 (62513)",
+        price: 155,
+        img:"Mysz-SteelSeries-Rival-3-(62513).jpg"
     }
 ]
 var cart = [
@@ -269,6 +333,14 @@ var cart = [
     {
         name: 'dsc',
         price:0
+    },
+    {
+        name: 'kla',
+        price:0
+    },
+    {
+        name: 'mys',
+        price:0
     }
 ]
 
@@ -296,6 +368,8 @@ function SelectedItemValue(SelectId) {
     const summaryObd = document.getElementById("summaryObd");
     const summaryMon = document.getElementById("summaryMon");
     const summaryDsc = document.getElementById("summaryDsc");
+    const summaryKla = document.getElementById("summaryKla");
+    const summaryMys = document.getElementById("summaryMys");
 
     if (SelectId == "cpu") {
         summaryCPU.innerHTML = "<td><img src='img/"+cpu[strAtt - 1].img+"'></td>"+"<td>"+cpu[strAtt - 1].name + " </td><td> " + cpu[strAtt - 1].price+"</td>"
@@ -336,9 +410,19 @@ function SelectedItemValue(SelectId) {
         cart[7].price = dsc[strAtt - 1].price
         cart[7].name = dsc[strAtt - 1].name
     }
+    else if (SelectId == "kla") {
+        summaryKla.innerHTML = "<td><img src='img/"+kla[strAtt - 1].img+"'></td>"+"<td>"+kla[strAtt - 1].name + " </td><td> " + kla[strAtt - 1].price+"</td>"
+        cart[8].price = kla[strAtt - 1].price
+        cart[8].name = kla[strAtt - 1].name
+    }
+    else if (SelectId == "mys") {
+        summaryMys.innerHTML = "<td><img src='img/"+mys[strAtt - 1].img+"'></td>"+"<td>"+mys[strAtt - 1].name + " </td><td> " + mys[strAtt - 1].price+"</td>"
+        cart[9].price = mys[strAtt - 1].price
+        cart[9].name = mys[strAtt - 1].name
+    }
     else {}
 
-    document.getElementById("sumAll").innerHTML="<b>Suma koszyka: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price+cart[4].price+cart[5].price+cart[6].price+cart[7].price) +"</b>";
+    document.getElementById("sumAll").innerHTML="<b>Suma koszyka: "+ (cart[0].price+cart[1].price+cart[2].price+cart[3].price+cart[4].price+cart[5].price+cart[6].price+cart[7].price+cart[8].price+cart[9].price) +"</b>";
 }
 
 
@@ -367,6 +451,13 @@ for (let i = 0; i < mon.length; i++) {
 for (let i = 0; i < dsc.length; i++) {
     addOpt("dsc", dsc[i].id, dsc[i].name)
 }
+for (let i = 0; i < kla.length; i++) {
+    addOpt("kla", kla[i].id, kla[i].name)
+}
+for (let i = 0; i < mys.length; i++) {
+    addOpt("mys", mys[i].id, mys[i].name)
+}
+
 
 
 
